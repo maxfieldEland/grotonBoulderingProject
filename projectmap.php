@@ -50,6 +50,7 @@
             <li><a href="whygroton.php">Why Groton</a></li>
             <li><a href ="map.php"> Map of Areas</a></li>
             <li><a href ="areas.php"> Areas </a></li>
+            <li><a href ="media.php"> Media </a></li>
  
         </ul>
     </body>
