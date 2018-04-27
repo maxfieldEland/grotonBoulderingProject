@@ -48,9 +48,10 @@
 
         <ul align = "center">
             <li><a href="whygroton.php">Why Groton</a></li>
-            <li><a href ="map.php"> Map of Areas</a></li>
-            <li><a href ="areas.php"> Areas </a></li>
+            <li><a href ="maps.php"> Map of Areas</a></li>
+            <li><a href ="bouldering-details.php"> Climbs Logged </a></li>
             <li><a href ="media.php"> Media </a></li>
+            <li><a href ="form.php"> Log New Climb </a></li>
  
         </ul>
     </body>
