@@ -25,14 +25,13 @@ if($debug){
        print '<p>File Open Failed.</p>';
      }
 }
-// ***** End weather Data ***************************************************
+// ***** End bouldering data ***************************************************
 
-// ***** Read weather Data ***************************************************
+// ***** Read bouldering Data ***************************************************
 if($file){
 if($debug) {print '<p>Begin reading data into </p>';
 }
-      // read the header row, copy the line for each header
-      // you have.
+
       $headers[] = fgetcsv($file);
 
     if($debug) {
@@ -50,7 +49,7 @@ if($debug) {print '<p>Begin reading data into </p>';
      if($debug) {
         print '<p>Finished reading data. File closes.</p>';
         print '<p>My data array</p><pre>';
-        print_r ($boulderdetailsDetails);
+        print_r ($boulderdetails);
         print '</pre></p>';
      }
 } // ends if file was opened    
@@ -58,7 +57,7 @@ if($debug) {print '<p>Begin reading data into </p>';
 ?>
 
         <article id="content">
-            <h2>Detailed Weather</h2>
+            <h2>Climbs to Check Out</h2>
             <table>
 <?php
         foreach($headers as $header){
@@ -77,28 +76,25 @@ if($debug) {print '<p>Begin reading data into </p>';
             print '</tr>'. PHP_EOL;
         }
        
-     $totalWeatherDetail = 0;
+     $totalClimbs = 0;
      
-        foreach($weatherDetails as $weatherDetail) {
-            if($weatherStation == $weatherDetail[1]){
-            $totalWeatherDetail++;    
+        foreach($boulderdetails as $boulderDetail) {  
             print '<tr>';
-            print '<td>' . $weatherDetail [0] . '</td>';
-            print '<td>' . $weatherDetail [1] . '</td>';
-            print '<td>' . $weatherDetail [2] . '</td>';
-            print '<td>' . $weatherDetail [3] . '</td>';
-            print '<td>' . $weatherDetail [4] . '</td>';
-            print '<td>' . $weatherDetail [5] . '</td>';
-            print '<td>' . $weatherDetail [6] . '</td>';
-            print '<td>' . $weatherDetail [7] . '</td>';
-            print '<td>' . $weatherDetail [8] . '</td>';
-            print '<td>' . $weatherDetail [9] . '</td>';
-            
+            print '<td>' . $boulderDetail [0] . '</td>';
+            print '<td>' . $boulderDetail [1] . '</td>';
+            print '<td>' . $boulderDetail [2] . '</td>';
+            print '<td>' . $boulderDetail [3] . '</td>';
+            print '<td>' . $boulderDetail [4] . '</td>';
+            print '<td>' . $boulderDetail [5] . '</td>';
+            print '<td>' . $boulderDetail [6] . '</td>';
+            print '<td>' . $boulderDetail [7] . '</td>';
+            print '<td>' . $boulderDetail [8] . '</td>';
+            print '<td>' . $boulderDetail [9] . '</td>';
             print '</tr>'. PHP_EOL;
-            }
+            $totalClimbs = $totalClimbs + 1;
         }
          
-        print '<tr><td colspan="10">' . $totalWeatherDetail . ' Total Daily Observations</td></tr>';
+        print '<tr><td colspan="10">' . $totalClimbs . ' Total Climbs Logged </td></tr>';
           ?>
                 
             </table>  
